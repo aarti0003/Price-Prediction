@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    
+    <!-- Chatbot Icon Styles -->
+    <style>
+        #chatbot-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            cursor: pointer;
+            z-index: 999;
+            width: 50px;
+            height: 50px;
+            background-color: rgb(248, 246, 246);
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        #chatbot-icon img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body class="bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class='card' style="width: 100%; height:100%; margin-top:50px">
+                <div class="card-header" style="text-align: center;">
+                    <h1> HOUSE PRICE PREDICTION</h1>
+                </div>
+                <div class="card-body" style='text-align: center'>
+                    <form action="{{ url_for('predict') }}" method="POST">
+                        <div class="row">
+                            <div class="col-md-6 form-group" style="text-align: center">
+                                <label>LOCATION</label>
+                                <select class="form-control" name="sLocation" id="uiLocation" required=1>
+                                    {% for location in locations%}
+                                    <option value="{{location}}">{{location}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="col-md-6 form-group" style="text-align: center">
+                                <label>BHK</label>
+                                <input type="number" class='form-control'id="uiBHK" name="uiBHK" min = "1" max = "5" placeholder="Enter BHK">
+                            </div>
+                            <div class="col-md-6 form-group" style="text-align: center">
+                                <label>AREA</label>
+                                <input type="number" class='form-control'id="uiSqft" name="Squareft" placeholder="Enter Area (sqft)" min="450" max="2000">
+                            </div>
+                            <div class="col-md-6 form-group" style="text-align: center">
+                                <label>BATHROOMS</label>
+                                <input type="number" class='form-control'id="uiBathrooms" name="uiBathrooms" min = "1" max = "5" placeholder="Enter Bathrooms">
+                            </div>
+                            <br><br><br>
+
+                            <div class="col-md-12 form-group">
+                                <button class="btn btn-primary form-control">ESTIMATE PRICE</button>
+                            </div>
+                        </div>
+                    </form>
+                    <br>
+
+                    <div class="col-md-12" style="text-align: center;">
+                        <h3><span>{{result}}</span></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbot Icon -->
+    <div id="chatbot-icon" onclick="toggleChatbot()">
+        <img src="/static/Chatbot.png" alt="Chatbot">
+    </div>
+
+    <!-- Chatbot Script -->
+    <script>
+        function toggleChatbot() {
+            var chatbotWindow = window.open('', 'Chatbot Window', 'width=400,height=500');
+
+            if (chatbotWindow.location.href === 'about:blank') {
+                chatbotWindow.document.write('<html><head><title>Chatbot</title></head><body><iframe src="https://webchat.botframework.com/embed/homebot-bot?s=Cb4FFduRHF8.e43NvGeUjNemqQfgIP19fEKNj_D3Mp3EeqiqYDvb_N8" style="min-width: 400px; width: 100%; min-height: 500px;"></iframe></body></html>');
+            }
+        }
+    </script>
+</body>
+</html>
