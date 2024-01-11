@@ -4,7 +4,7 @@
 <br>
 <h2>Project Details</h2>
 <b>Project Demo URL :</b>https://houseprice-predictor.azurewebsites.net/ <br>
-<b>Demo Video URL : <br>
+<b>Demo Video URL :</b>https://drive.google.com/file/d/1KLpMS--6SaaC24haFyjv7OnnUAEfamr9/view?usp=drive_link <br>
 <b>Github Repository URL :</b>https://github.com/aarti0003/Price-Prediction <br>
 <b>Industry :</b> Automotive and Technology<br>
 
@@ -51,7 +51,7 @@
 <img src="https://github.com/aarti0003/Price-Prediction/blob/main/static/webservice.png" alt="azure-web-app"></img><br>
 
 <h3>Azure Storage Blob Container</h3>
-<b>Description:</b><p align="justify">Azure Storage Blob Container efficiently manages and retrieves the "Pune_House_Data.csv" dataset for model training, enhancing the project's data storage capabilities.</p>
+<b>Description:</b><p align="justify">Azure Storage Blob Container efficiently manages and retrieves the "pune_home_prices_model.pickle" pickle file for model training, enhancing the project's data storage capabilities.</p>
 <img src="https://github.com/aarti0003/Price-Prediction/blob/main/static/storage.png" alt="azure-storage"></img><br>
 
 <h3>Azure AI Language Service(QnAMaker service)</h3>
