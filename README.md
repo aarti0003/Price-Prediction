@@ -1,9 +1,9 @@
 <h1>Microsoft-Future-Ready-Talent-Virtual-Internship-Project</h1>
 <h2>Project Title: House Price Predictor</h2>
-<b><a href="https://houseazwebapp01.azurewebsites.net/"> House Price Predictor</a></b>
+<b><a href="https://houseprice-predictor.azurewebsites.net/"> House Price Predictor</a></b>
 <br>
 <h2>Project Details</h2>
-<b>Project Demo URL :</b> https://houseazwebapp01.azurewebsites.net/ <br>
+<b>Project Demo URL :</b>https://houseprice-predictor.azurewebsites.net/ <br>
 <b>Demo Video URL : <br>
 <b>Github Repository URL :</b>https://github.com/aarti0003/Price-Prediction <br>
 <b>Industry :</b> Automotive and Technology<br>
